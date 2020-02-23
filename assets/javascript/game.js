@@ -1,29 +1,28 @@
 $(document).ready(function() {
 
-    // Variables's initialization 
+    
     var win = 0;
-    var losse = 0;
-    var numberGuess = 0;
-    var result = 0;
-    var crystalNumber = [];
-    var rubi = $("#rubi");
-    var diamante = $("#diam");
-    var esmeralda = $("#esmeralda");
-    var zafiro = $("#zafiro");
-    var divID = "";
-    var numberGuessvalue = 0
-
-
-    function restartVariables(){
-        
+        losse = 0;
         numberGuess = 0;
-       result = 0;
+        result = 0;
         crystalNumber = [];
         rubi = $("#rubi");
         diamante = $("#diam");
         esmeralda = $("#esmeralda");
         zafiro = $("#zafiro");
-        divID = "";
+        numberGuessvalue = 0
+
+
+    function restart_html_values(){
+        
+        numberGuess = 0;
+        result = 0;
+        crystalNumber = [];
+        rubi = $("#rubi");
+        diamante = $("#diam");
+        esmeralda = $("#esmeralda");
+        zafiro = $("#zafiro");
+      
         numberGuessvalue = 0
     }
 
@@ -33,7 +32,7 @@ $(document).ready(function() {
         numberGuess = Math.floor(Math.random() * (max - min + 1) + min);
     }
 
-    function crystalValues(){
+    function crystal_random(){
         
         for (var i = 0; i < 4; i++) {
             random(12, 1);
@@ -57,7 +56,7 @@ $(document).ready(function() {
 
     random(120, 19);    
     restartValues();
-    crystalValues();
+    crystal_random();
 
     $(".img-size").on("click", function() {
         
@@ -68,17 +67,17 @@ $(document).ready(function() {
         
         if(result === numberGuessvalue){
             win ++;           
-            restartVariables();
+            restart_html_values();
             random(120, 19);
             restartValues();
-            crystalValues();      
+            crystal_random();      
         }else if(result > numberGuessvalue){
            
             losse ++;
-            restartVariables();
+            restart_html_values();
             random(120, 19);          
             restartValues();
-            crystalValues();  
+            crystal_random();  
         }
         
     });
