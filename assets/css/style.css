@@ -1,0 +1,26 @@
+body{
+  background: url(tumagen.gif) no-repeat center ;
+}
+
+.img-size{
+  width: 80px;
+  height: 80px;
+  border-image: 10px;
+  
+}
+ul li {
+  list-style: none;
+}
+
+.space{
+  padding:20px;
+}
+section{
+
+  background-color: burlywood;
+}
+.letter{
+  font-family: 'Dancing Script', cursive;
+    line-height: 30px;
+    font-weight: bold;
+}
